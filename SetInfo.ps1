@@ -1,0 +1,12 @@
+$objUser = [ADSI]"LDAP://cn=MyNewUser,ou=myTestOU,dc=nwtraders,dc=msft"
+$objUser.put("SamaccountName", "myNewUser")
+$objUser.put("givenName", "My")
+$objUser.Put("initials", "N.")
+$objUser.Put("sn", "User")
+$objUser.Put("DisplayName", "My New User")
+$objUser.Put("description" , "simple new user")
+$objUser.Put("physicalDeliveryOfficeName", "RQ2")
+$objUser.Put("telephoneNumber", "999-222-1111")
+$objUser.Put("mail", "<a href="mailto:mnu@hotmail.com">mnu@hotmail.com</a>")
+$objUser.Put("wwwHomePage", "<a href="http://www.mnu.msn.com"">http://www.mnu.msn.com"</a>)
+$objUser.setInfo()

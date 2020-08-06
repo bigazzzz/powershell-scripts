@@ -1,0 +1,2 @@
+$date_with_offset= (Get-Date).AddDays(-365)
+Get-ADUser -Properties LastLogonDate -Filter {LastLogonDate -lt $date_with_offset } | Sort LastLogonDate | FT Name, LastLogonDate -AutoSize  | Out-File dead_users.txt
